@@ -73,6 +73,6 @@ func SearchData(w http.ResponseWriter, r *http.Request) {
 	mails := models.MapResource(data_result, models.HitsToSource)
 	response_mails := dto.NewResponse[[]models.Source](mails)
 	w.Write([]byte(dto.JsonResponse[[]byte](response_mails)))
-	// data_result := dto.NewResponse[[]models.Source](response.Hits.Hits)
+	// data_result := dto.NewResponse[models.SearchDataResponse](response)
 	// w.Write([]byte(dto.JsonResponse[[]byte](data_result)))
 }
