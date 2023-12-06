@@ -1,5 +1,5 @@
 
-const url = "http://ec2-3-15-154-241.us-east-2.compute.amazonaws.com:3000/api/v1/mail"
+const url = "http://ec2-3-15-154-241.us-east-2.compute.amazonaws.com:3000/api/v1"
 
 export class MailServices {
   constructor() {
