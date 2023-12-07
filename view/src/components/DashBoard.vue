@@ -53,9 +53,18 @@ export default {
   },
   methods: {
     formatContent(content) {
+      const queryPosition = content.toLowerCase().indexOf(this.query.toLowerCase());
+
       const paragraphs = content.split('\n\n'); // Dividir por párrafos
       const formattedContent = paragraphs.map(paragraph => `${paragraph}`).join('');
-      const highlightedContent = formattedContent.replace(this.query, `<span style="background-color: yellow; font-weight: bold;">${this.query}</span>`);
+
+      if(queryPosition === -1) {
+
+      }
+
+      const shortContent = (queryPosition > 40 ? "..." : "") + formattedContent.slice(queryPosition < 40 ? 0 : queryPosition - 40, queryPosition + 85) + "..."
+
+      const highlightedContent = shortContent.replace(this.query, `<span style="background-color: yellow; font-weight: bold;">${this.query}</span>`);
       return highlightedContent
     }
   }
