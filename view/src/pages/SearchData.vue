@@ -22,9 +22,12 @@ export default {
     created() { 
       this.mailService = new MailServices()
     },
+    async mounted() {
+      await this.search_data()
+    },
     data() {
       return {
-        query: "",
+        query: "inspected",
         pages: 10,
         mails: []
       }
@@ -33,10 +36,6 @@ export default {
       async search_data() {
         const request = { query: this.query, pages: this.pages }
         const { resource } = await this.mailService.search_data(request)
-
-        // console.log(resource)
-        // const { hits } = resource
-        // const { hits: mails } = hits
         this.setMails(resource)
       },
       setMails(newMails) {
