@@ -1,6 +1,7 @@
 package api
 
 import (
+	"fmt"
 	"mamuro_mail-api/api/controllers"
 	"net/http"
 	"os"
@@ -42,5 +43,5 @@ func RunServer(port int) {
 	controllers.AddControllers(apiv1)
 	r.Mount("/api/v1", apiv1)
 
-	http.ListenAndServe(":3000", r)
+	http.ListenAndServe(fmt.Sprintf(":%v", port), r)
 }
