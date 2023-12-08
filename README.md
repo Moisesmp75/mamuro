@@ -31,3 +31,4 @@ ZINC_FIRST_ADMIN_USER=admin ZINC_FIRST_ADMIN_PASSWORD=Complexpass#123</pre>
 
 # Visualizar la aplicacion
 
+![imagen](https://github.com/Moisesmp75/mamuro/blob/main/imagen.png)
