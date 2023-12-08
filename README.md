@@ -1,5 +1,5 @@
 # mamuro
-aplicacion realizada con Go y Vue
+Mamuro es un visualizador de emails de enron_mail, la herramienta para la indexacion de emails fue zincsearch, mientras que la aplicacion fue desarrollada con go(backend) y Vue.js(frontend)
 
 # Instalaciones necesarias
 <ul>
